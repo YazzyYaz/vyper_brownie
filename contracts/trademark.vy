@@ -27,5 +27,6 @@ def registerTrademark(phraseText: string[100], author: string[100]) -> bool:
 
 @public
 @constant
-def getTrademarkData(phrase: string[100]) -> Trademark:
-  return self.trademarkRegistry[keccak256(phrase)]
+def getTrademarkData(phrase: string[100]) -> (string[100], string[100], uint256(sec, positional), bytes32):
+  t: Trademark = self.trademarkRegistry[keccak256(phrase)]
+  return t.phrase, t.authorName, t.registrationTime, t.proof
