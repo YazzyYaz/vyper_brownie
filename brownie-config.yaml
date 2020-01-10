@@ -1,7 +1,7 @@
 # Brownie configuration file
 # https://eth-brownie.readthedocs.io/en/stable/config.html
 network:
-    default: development # the default network that brownie connects to
+    default: development 
     settings:
         gas_limit: false
         gas_price: false
@@ -20,6 +20,8 @@ network:
                 accounts: 10
                 evm_version: petersburg
                 mnemonic: brownie
+        dev-kotti:
+            host: http://127.0.0.1:30304
         # set your Infura API token to the environment variable WEB3_INFURA_PROJECT_ID
         mainnet:
             host: https://mainnet.infura.io/v3/$WEB3_INFURA_PROJECT_ID
@@ -31,6 +33,10 @@ network:
             host: https://rinkeby.infura.io/v3/$WEB3_INFURA_PROJECT_ID
         ropsten:
             host: https://ropsten.infura.io/v3/$WEB3_INFURA_PROJECT_ID
+        kotti:
+            host: https://www.ethercluster.com/kotti
+        classic:
+            host: https://www.ethercluster.com/
 pytest:
     # these settings replace the defaults when running pytest
     gas_limit: 6721975

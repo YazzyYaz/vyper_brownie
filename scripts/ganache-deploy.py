@@ -1,6 +1,6 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 from brownie import *
+import logging
+
 
 def main():
-    accounts[0].deploy(trademark)
+    t = accounts[0].deploy(trademark)
